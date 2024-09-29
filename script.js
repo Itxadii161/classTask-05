@@ -6,19 +6,21 @@ function findDate() {
     var dayArea = document.getElementById("dayArea");
 
     const selectDate = document.getElementById('selectDate').value;
+    var myDate = new Date(selectDate);
+    var currentDate = new Date();
 
     if (selectDate) {
-        const year = new Date(selectDate).getFullYear();
+        const year = currentDate.getFullYear() - myDate.getFullYear(); 
         yearArea.textContent = `${year} Year`;
 
-        const month = new Date(selectDate).getMonth();
+        const month = currentDate.getMonth() - myDate.getMonth();
         monthArea.textContent = `${month} Month`;
 
-        const day = new Date(selectDate).getDate();
+        const day = currentDate.getDate - myDate.getDate();
         dayArea.textContent = `${day}  Day`;
     } else {
         yearArea.textContent = '0';
-        monthArea.textContent = '0.';
+        monthArea.textContent = '0';
         dayArea.textContent = '0';
     }
 }
