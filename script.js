@@ -10,14 +10,18 @@ function findDate() {
     var currentDate = new Date();
 
     if (selectDate) {
-        const year = currentDate.getFullYear() - myDate.getFullYear(); 
-        yearArea.textContent = `${year} Year`;
+        var diffDate = currentDate - myDate;
+        const totalDays = Math.floor(diffDate / (1000 * 60 * 60 * 24));
+    
+        const years = Math.floor(totalDays / 365);
+        const remDays = totalDays % 365;
 
-        const month = currentDate.getMonth() - myDate.getMonth();
-        monthArea.textContent = `${month} Month`;
-
-        const day = currentDate.getDate() - myDate.getDate();
-        dayArea.textContent = `${day}  Day`;
+        const months = Math.floor(remDays / 30);
+        const days = remDays % 30;
+        
+        yearArea.textContent = `${years} Year${years === 1 ? '' : 's'}`;
+        monthArea.textContent = `${months} Month${months === 1 ? '' : 's'}`;
+        dayArea.textContent = `${days} Day${days === 1 ? '' : 's'}`;
     } else {
         yearArea.textContent = '0';
         monthArea.textContent = '0';
