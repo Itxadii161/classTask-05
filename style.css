@@ -1,6 +1,16 @@
-.area{
+body{
     background-color: blue;
     height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.area{
+    box-shadow: 0px 0px 10px 10px rgb(46, 46, 85);
+    border-radius: 10px;
+    width: 400px;
+    height: 400px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -14,6 +24,7 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    border-radius: 6px;
 }
 #selectDate{
     background-color: white;
@@ -35,7 +46,8 @@ button{
     text-align: center; 
 }
 button:hover{
-
+background-color: blue;
+color: white;
 }
 .area2{
 margin-top: 20px;
@@ -54,6 +66,7 @@ width: 300px;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    border-radius: 6px;
 }
 .area p span {
     color: #bebebe;
