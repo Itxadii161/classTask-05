@@ -12,16 +12,20 @@ function findDate() {
     if (selectDate) {
         var diffDate = currentDate - myDate;
         const totalDays = Math.floor(diffDate / (1000 * 60 * 60 * 24));
+        // console.log(totalDays)
     
         const years = Math.floor(totalDays / 365);
         const remDays = totalDays % 365;
-
+        // console.log(years)
+        // console.log(remDays)
+        
         const months = Math.floor(remDays / 30);
         const days = remDays % 30;
-        
-        yearArea.textContent = `${years} Year${years === 1 ? '' : 's'}`;
-        monthArea.textContent = `${months} Month${months === 1 ? '' : 's'}`;
-        dayArea.textContent = `${days} Day${days === 1 ? '' : 's'}`;
+        // console.log(days)
+
+        yearArea.textContent = `${years} Year`;
+        monthArea.textContent = `${months} Month`;
+        dayArea.textContent = `${days} Day`;
     } else {
         yearArea.textContent = '0';
         monthArea.textContent = '0';
