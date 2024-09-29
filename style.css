@@ -20,11 +20,14 @@ display: flex;
 justify-content: space-around;
 width: 300px;
 }
-.inputs{
+.outputs{
     background-color: black;
     border: none;
     height: 80px;
     width: 80px;
     color: white;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }

@@ -15,7 +15,7 @@ function findDate() {
         monthArea.textContent = `${month} Month`;
 
         const day = new Date(selectDate).getDate();
-        dayArea.textContent = `${day} Day`;
+        dayArea.textContent = `${day}  Day`;
     } else {
         yearArea.textContent = '0';
         monthArea.textContent = '0.';
